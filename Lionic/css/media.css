@@ -1,0 +1,373 @@
+/*!!Когда возникла ошибка в разрешении, мы должны её исправить на разрешении выше!!*/
+
+@media (max-width: 1200px) {
+    .form-input,
+    .form-select {
+        width: 100%;
+    }
+}
+
+/*ошибка на 768px*/
+@media (max-width: 992px) {
+    /*header*/
+    /*убираем меню*/
+    .header__nav {
+        display: none;
+    }
+
+    .header__btn {
+        margin-right: 7px;
+        padding: 11px 21px;
+    }
+
+    .burger {
+        position: relative;
+        display: block;
+        width: 40px;
+        height: 40px;
+        border: 1px solid currentColor; /*цвет будет как у color!!!*/
+        border-radius: 3px;
+        color: #317289;
+    }
+
+    .burger__line {
+        position: absolute;
+        left: 50%; /*выравнивает элемент по центру родителя (burger)*/
+        width: 20px;
+        height: 2px;
+        border-radius: inherit;
+        background-color: currentColor;
+        transform: translateX(-50%); /*выравнивает элемент по центру родителя (burger)*/
+    }
+
+    .burger__line:nth-child(1) {
+        top: 13px;
+    }
+
+    .burger__line:nth-child(2) {
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .burger__line:nth-child(3) {
+        bottom: 13px;
+    }
+
+    /*hero*/
+    .hero__content {
+        width: 75%;
+    }
+
+    /*services*/
+    .services-list {
+        --offsets: 1; /*количество отступов между карточек на 768px*/
+    }
+
+    /*clients*/
+    .clients-list {
+        --offsets: 1;
+    }
+
+    /*footer*/
+    .footer__container {
+        flex-direction: column;
+    }
+
+    .footer__left {
+        margin-bottom: var(--gap);
+    }
+}
+
+/*ошибка на 576px*/
+@media (max-width: 768px) {
+    .blog-preview-link {
+        flex-direction: column;
+    }
+
+    .form {
+        padding: 0;
+    }
+
+    .footer__nav .nav__item:not(:last-child) {
+        margin-right: 18px;
+    }
+}
+
+/*ошибка на 320px*/
+@media (max-width: 576px) {
+    /*общие*/
+    :root {
+        --gap: 15px;
+    }
+
+    .sectiot-offset {
+        margin: 0;
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 16px;
+    }
+
+    /*header*/
+    .header {
+        padding: 15px 0;
+    }
+
+    .header__logo {
+        width: 80px;
+    }
+
+    /*hero*/
+    .hero {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+    
+    .hero__content {
+        width: 100%;
+    }
+
+    .hero__title {
+        margin-bottom: 16px;
+    }
+
+    .hero__descr {
+        margin-bottom: 16px;
+    }
+
+    .hero__wrapper {
+        width: 100%;
+    }
+
+    .hero__btn {
+        width: 100%;
+    }
+
+    /*services*/
+    .services { 
+        padding-bottom: 0;
+    }
+
+    .services-title {
+        text-align: left;
+    }
+
+    .section-descr {
+        margin-bottom: 15px;
+        text-align: left;
+        font-weight: 400;
+        font-size: 16px;
+        letter-spacing: 0.1px;
+    }
+
+    .services-list {
+        row-gap: 20px;
+    }
+
+    .services-item {
+        min-height: 220px;
+        padding: 15px;
+    }
+
+    .services-item-icon {
+        height: 42px;
+        margin-bottom: 16px;
+    }
+
+    .services-item-title {
+        font-size: 16px;
+        line-height: 130%;
+        margin-bottom: 3px;
+    }
+
+    .services-item-descr {
+        font-size: 12px;
+        line-height: 150%;
+    }
+
+    /*articles*/
+    .articles {
+        padding-top: 2px;
+        padding-bottom: 178px;
+    }
+
+    .articles-title {
+        margin-bottom: 14px;
+    }
+
+    .articles-list {
+        --offsets: 0;
+    }
+
+    .articles-item {
+        min-height: 191px;
+        margin-bottom: 0;
+    }
+
+    .blog-preview-link {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .blog-preview-image {
+        flex-shrink: 0;
+        width: 86px;
+        height: 100%;
+    }
+
+    .blog-preview-text {
+        padding: 15px 14px;
+    }
+
+    .blog-preview-title {
+        margin-bottom: 3px;
+    }
+
+    /*clients*/
+    .clients {
+        padding-top: 62px;
+    }
+
+    .clients-list {
+        --offsets: 0;
+    }
+
+    .clients-item {
+        padding: 18px;
+    }
+
+    .clients-user {
+        padding-top: 30px;
+    }
+
+    .clients-name {
+        margin-bottom: -5px;
+    }
+
+    /*contacts*/
+    .contacts-list {
+        --offsets: 0;
+        gap: 25px;
+    }
+
+    .contacts-item {
+        padding-top: 37px;
+    }
+
+    .contacts-item-caption {
+        margin-bottom: 15px;
+    }
+
+    /*join us*/
+    .join-us-title {
+        text-align: left;
+    }
+
+    .join-us-descr {
+        text-align: left;
+    }
+
+    .form-top {
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+
+    .form-left {
+        width: 100%;
+        margin-bottom: var(--gap);
+    }
+
+    .form-input,
+    .form-select {
+        padding-left: 19px;
+    }
+
+    .form-right {
+        width: 100%;
+    }
+
+    .form-textarea {
+        padding-left: 19px;
+        height: 240px;
+    }
+
+    .form-wrapper {
+        width: 100%;
+    }
+
+    .form-btn {
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    /*footer*/
+    .footer {
+        padding-top: 30px;
+        padding-bottom: 0;
+    }
+
+    .footer__container {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+
+    .footer__left,
+    .footer__right {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .footer__right {
+        margin-bottom: 27px;
+    }
+
+    .footer__logo {
+        width: 80px;
+        margin-bottom: 45px;
+    }
+
+    .footer__nav {
+        margin: 0;
+        margin-bottom: 27px;
+    }
+
+    .footer__nav .nav__list {
+        flex-wrap: wrap;
+        gap: 15px 30px;
+    }
+
+    .footer__nav .nav__link {
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .footer__nav .nav__item:not(:last-child) {
+        margin-right: 0;
+    }
+
+    .social-item:not(:last-child) {
+        margin-right: 25px;
+    }
+
+    .social-link {
+        justify-content: space-between;
+    }
+
+    .footer__copy {
+        position: relative;
+        width: 100%;
+        text-align: center;
+    }
+
+    .footer__copy::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: -17px;
+        width: calc(100% + 30px);
+        height: 1px;
+        background-color: #c4c4c4;
+    }
+}
